@@ -1,0 +1,8 @@
+/node_modules
+/public/storage
+/vendor
+/.vscode
+.env
+*.out
+/public/js/app.js
+/public/css/app.css
