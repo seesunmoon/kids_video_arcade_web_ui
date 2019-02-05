@@ -14,21 +14,6 @@ class VideoController extends Controller
         return $videos->toJson();
     }
 
-    public function add(Request $request)
-    {
-        $validatedData = $request->validate([
-            'title' => 'required',
-            'vid' => 'required'
-        ]);
-
-        $video = Video::create([
-            'title' => $validatedData['title'],
-            'vid' => $validatedData['vid'],
-        ]);
-
-        return response()->json('Video created!');
-    }
-
     public function counter($vid)
     {
         Video::where('vid', $vid)->increment('play_counter');

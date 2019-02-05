@@ -14,5 +14,4 @@ use Illuminate\Http\Request;
 */
 
 Route::get('videos', 'VideoController@index');
-Route::post('videos', 'VideoController@add');
 Route::put('videos/{vid}', 'VideoController@counter');
